@@ -1,0 +1,7 @@
+import { Context as PluginContext } from "@ubiquity-os/plugin-sdk";
+import { Env } from "./env";
+import { PluginSettings } from "./plugin-input";
+
+export type SupportedEvents = "push";
+
+export type Context<T extends SupportedEvents = SupportedEvents> = PluginContext<PluginSettings, Env, null, T>;
